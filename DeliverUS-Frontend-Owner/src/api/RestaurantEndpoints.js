@@ -1,10 +1,10 @@
-
+import { get } from './helpers/ApiRequestsHelper'
 function getAll () {
-  return restaurantsMock
+  return get('/users/myrestaurants')
 }
 
 function getDetail (id) {
-  return restaurantsDetailMock[id]
+  return get(`/restaurants/${id}`)
 }
 
 export { getAll, getDetail }
